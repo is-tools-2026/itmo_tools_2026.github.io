@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кофейня Стипендия — О нас</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= Шапка ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☕ Кофейня Стипендия</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">О нас</a>
+        <a href="menu.html" class="nav-link">Меню</a>
+        <a href="cart.html" class="nav-link">Корзина <span id="cart-count" class="cart-count">0</span></a>
+      </nav>
+      <label class="switch" title="Переключить режим багов">
+        <input type="checkbox" id="bug-toggle">
+        <span class="slider"></span>
+        <span class="switch-label" id="switch-label">🐛 Баги</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Hero ================= -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero-emoji">☕</span>
+        <h1 data-bug="Добро пожаловать в кофейнюю!" data-normal="Добро пожаловать в кофейню!">Добро пожаловать в кофейню!</h1>
+        <p data-bug="Кофе, который можно купить на стипендию... если она вообще придёт. Мы не гарантируем ни то, ни другое."
+           data-normal="Кофе, который можно купить на стипендию. Уютно, тепло и рядом с универом.">
+          Кофе, который можно купить на стипендию. Уютно, тепло и рядом с универом.
+        </p>
+        <a href="menu.html" class="btn" id="hero-cta">Смотреть меню</a>
+      </div>
+    </section>
+
+    <!-- ================= О нас ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-bug="О насс" data-normal="О нас">О нас</h2>
+        <p class="section-sub" data-bug="Коротко о том, как мы всё испортили"
+           data-normal="Коротко о том, кто мы такие">Коротко о том, кто мы такие</p>
+
+        <div class="cards-grid">
+          <div class="card">
+            <span class="card-emoji">🫘</span>
+            <h3 data-bug="Свежая обжарка" data-normal="Свежая обжарка">Свежая обжарка</h3>
+            <p data-bug="Зерно обжариваем на батарее в общежитии №3. Иногда подгорает, но мы называем это «карамельными нотами»."
+               data-normal="Зерно обжариваем каждое утро, чтобы кофе был ароматным.">
+              Зерно обжариваем каждое утро, чтобы кофе был ароматным.
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-emoji">🎓</span>
+            <h3 data-bug="Студенческие цены" data-normal="Студенческие цены">Студенческие цены</h3>
+            <p data-bug="Цены, которые переживут даже стипендия... если она вообще придёт. А она не придёт."
+               data-normal="Цены, которые переживут даже стипендия.">
+              Цены, которые переживут даже стипендия.
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-emoji">📶</span>
+            <h3 data-bug="Wi-Fi" data-normal="Wi-Fi">Wi-Fi</h3>
+            <p data-bug="Wi-Fi ловит только у окна, и только если встать на одну ногу и поднять ноутбук над головой."
+               data-normal="Быстрый Wi-Fi для пар и дедлайнов.">
+              Быстрый Wi-Fi для пар и дедлайнов.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-block" style="margin-top: 30px;">
+          <h3 data-bug="Наша история (версия 3.14)" data-normal="Наша история">Наша история</h3>
+          <p data-bug="Всё началось с того, что у нас сломалась кофемашина, а починить было дорого. Поэтому мы купили вторую, тоже сломанную. Теперь у нас две сломанные кофемашины и одна рабочая, которую мы прячем от гостей. Зато уютно!"
+             data-normal="Всё началось с маленькой кофемашины в общежитии. Теперь у нас уютная кофейня рядом с университетом, где каждый найдёт свой любимый напиток.">
+            Всё началось с маленькой кофемашины в общежитии. Теперь у нас уютная кофейня рядом с университетом, где каждый найдёт свой любимый напиток.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Место ================= -->
+    <section class="section" style="background: var(--cream-dark);">
+      <div class="container">
+        <h2 class="section-title" data-bug="Где мы находимся (примерно)" data-normal="Где мы находимся">Где мы находимся</h2>
+        <p class="section-sub" data-bug="Ищите по запаху кофе и звуку плачущих студентов"
+           data-normal="Ищите по запаху кофе">Ищите по запаху кофе</p>
+
+        <div class="map-wrap">
+          <div class="map" id="map">
+            <div class="map-road h"></div>
+            <div class="map-road v"></div>
+            <div class="map-landmark" style="left: 8%; top: 12%;">🏫<small>ВУЗ</small></div>
+            <div class="map-landmark" style="left: 70%; top: 10%;">🏪<small>Магазин</small></div>
+            <div class="map-landmark" style="left: 72%; top: 70%;">🚌<small>Остановка</small></div>
+            <div class="map-landmark" style="left: 6%; top: 72%;">🌳<small>Парк</small></div>
+            <div class="map-shop" id="map-shop" style="left: 42%; top: 40%;">☕<small>Мы тут</small></div>
+          </div>
+
+          <div class="map-info">
+            <div class="info-block">
+              <h3>Адрес</h3>
+              <p id="address" data-bug="ул. Студенческая, д. 13, корпус Б, подвал, за углом, где пахнет кофе и надеждой"
+                 data-normal="ул. Студенческая, д. 13">
+                ул. Студенческая, д. 13
+              </p>
+              <p style="font-size: 0.85rem; color: var(--brown-light); margin-top: 6px;" id="address-hint">
+                Наведите на адрес, чтобы уточнить
+              </p>
+            </div>
+
+            <div class="info-block">
+              <h3 data-bug="Часы работы (приблизительно)" data-normal="Часы работы">Часы работы</h3>
+              <table class="hours-table">
+                <tr>
+                  <td data-bug="Пн–Пт" data-normal="Пн–Пт">Пн–Пт</td>
+                  <td data-bug="8:00–22:00, но если бармен проспал — с 9:30" data-normal="8:00–22:00">8:00–22:00</td>
+                </tr>
+                <tr>
+                  <td data-bug="Сб" data-normal="Сб">Сб</td>
+                  <td data-bug="10:00–20:00 (может, и не откроемся)" data-normal="10:00–20:00">10:00–20:00</td>
+                </tr>
+                <tr>
+                  <td data-bug="Вс" data-normal="Вс">Вс</td>
+                  <td data-bug="24/7, кроме понедельников, которых в этом месяце 5" data-normal="11:00–18:00">11:00–18:00</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="info-block">
+              <h3 data-bug="Как добраться" data-normal="Как добраться">Как добраться</h3>
+              <p data-bug="Идите на запах кофе. Если запаха нет — значит, мы ещё не включили кофемашину. Подождите и понюхайте ещё раз."
+                 data-normal="5 минут пешком от главного корпуса, 2 минуты от остановки.">
+                5 минут пешком от главного корпуса, 2 минуты от остановки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Обратная связь ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-bug="Напишите нам (мы не ответим)" data-normal="Напишите нам">Напишите нам</h2>
+        <p class="section-sub" data-bug="Форма работает... в теории"
+           data-normal="Оставьте сообщение, и мы обязательно ответим">Оставьте сообщение, и мы обязательно ответим</p>
+
+        <form class="form-card" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="cf-name">Ваше имя</label>
+            <input type="text" id="cf-name" placeholder="Иван" autocomplete="off">
+            <div class="form-error" id="cf-name-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" placeholder="ivan@example.com" autocomplete="off">
+            <div class="form-error" id="cf-email-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Сообщение</label>
+            <textarea id="cf-message" placeholder="Напишите что-нибудь приятное"></textarea>
+            <div class="form-error" id="cf-message-error"></div>
+          </div>
+          <button type="submit" class="btn" id="cf-submit">Отправить</button>
+          <div class="form-success" id="cf-success" style="display: none;"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Подвал ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-emoji">☕</span>
+      <p data-bug="© 2026 Кофейня Стипендия. Все права защищены. Кофе — нет."
+         data-normal="© 2026 Кофейня Стипендия. Все права защищены.">
+        © 2026 Кофейня Стипендия. Все права защищены.
+      </p>
+      <p style="font-size: 0.8rem; opacity: 0.8;" data-bug="Сделано на коленке в перерыве между парами"
+         data-normal="Сделано с любовью и кофеином">Сделано с любовью и кофеином</p>
+    </div>
+  </footer>
+
+  <script src="js/bugs.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

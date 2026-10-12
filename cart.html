@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кофейня Стипендия — Корзина</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= Шапка ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☕ Кофейня Стипендия</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">О нас</a>
+        <a href="menu.html" class="nav-link">Меню</a>
+        <a href="cart.html" class="nav-link active">Корзина <span id="cart-count" class="cart-count">0</span></a>
+      </nav>
+      <label class="switch" title="Переключить режим багов">
+        <input type="checkbox" id="bug-toggle">
+        <span class="slider"></span>
+        <span class="switch-label" id="switch-label">🐛 Баги</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 50px 0;">
+      <div class="container">
+        <span class="hero-emoji">🛒</span>
+        <h1 data-bug="Корзина заказа (она же корзина страданий)" data-normal="Корзина заказа">Корзина заказа</h1>
+        <p data-bug="Всё, что вы нажали, уже здесь. Даже то, что вы не нажимали."
+           data-normal="Здесь всё, что вы выбрали в меню.">
+          Здесь всё, что вы выбрали в меню.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cart-layout">
+          <!-- ============ Корзина ============ -->
+          <div class="cart-panel">
+            <h2 style="margin-bottom: 16px;">Ваш заказ</h2>
+            <div id="cart-content">
+              <!-- Рендерится из js/cart.js -->
+            </div>
+          </div>
+
+          <!-- ============ Оплата ============ -->
+          <div class="pay-panel">
+            <h3 data-bug="Оплата (деньги не возвращаются)" data-normal="Оплата">Оплата</h3>
+            <form id="pay-form" novalidate>
+              <div class="form-group">
+                <label for="pay-card">Номер карты</label>
+                <input type="text" id="pay-card" placeholder="1234 5678 9012 3456" autocomplete="off" maxlength="19">
+                <div class="form-error" id="pay-card-error"></div>
+              </div>
+              <div class="card-input-row">
+                <div class="form-group">
+                  <label for="pay-exp">Срок</label>
+                  <input type="text" id="pay-exp" placeholder="ММ/ГГ" autocomplete="off" maxlength="7">
+                  <div class="form-error" id="pay-exp-error"></div>
+                </div>
+                <div class="form-group">
+                  <label for="pay-cvv">CVV</label>
+                  <input type="text" id="pay-cvv" placeholder="123" autocomplete="off" maxlength="3">
+                  <div class="form-error" id="pay-cvv-error"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="pay-name">Имя на карте</label>
+                <input type="text" id="pay-name" placeholder="IVAN IVANOV" autocomplete="off">
+                <div class="form-error" id="pay-name-error"></div>
+              </div>
+              <button type="submit" class="btn btn-green" id="pay-submit" style="width: 100%;">Оплатить</button>
+              <div class="form-success" id="pay-success" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Диалог подтверждения ================= -->
+  <div class="dialog-overlay" id="dialog-overlay">
+    <div class="confirm-dialog" id="confirm-dialog">
+      <span class="dialog-emoji">🤔</span>
+      <h3 data-bug="Вы уверены?" data-normal="Подтверждение заказа">Подтверждение заказа</h3>
+      <p data-bug="Подумайте ещё раз. И ещё. И ещё раз. Мы подождём. Нам некуда спешить. А вам?"
+         data-normal="Проверьте состав заказа и подтвердите оформление.">
+        Проверьте состав заказа и подтвердите оформление.
+      </p>
+      <div class="dialog-btns">
+        <button class="btn btn-green" id="dialog-yes">Да</button>
+        <button class="btn btn-danger" id="dialog-no">Нет</button>
+      </div>
+      <div class="dialog-note" id="dialog-note"></div>
+    </div>
+  </div>
+
+  <!-- ================= Подвал ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-emoji">☕</span>
+      <p data-bug="© 2026 Кофейня Стипендия. Деньги не возвращаются, потому что их уже нет."
+         data-normal="© 2026 Кофейня Стипендия. Все права защищены.">
+        © 2026 Кофейня Стипендия. Все права защищены.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/bugs.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кофейня Стипендия — Меню</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= Шапка ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">☕ Кофейня Стипендия</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">О нас</a>
+        <a href="menu.html" class="nav-link active">Меню</a>
+        <a href="cart.html" class="nav-link">Корзина <span id="cart-count" class="cart-count">0</span></a>
+      </nav>
+      <label class="switch" title="Переключить режим багов">
+        <input type="checkbox" id="bug-toggle">
+        <span class="slider"></span>
+        <span class="switch-label" id="switch-label">🐛 Баги</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 50px 0;">
+      <div class="container">
+        <span class="hero-emoji">📋</span>
+        <h1 data-bug="Менюю" data-normal="Меню">Меню</h1>
+        <p data-bug="Цены указаны в рублях. Наличие — в процентах. Проценты — враньё."
+           data-normal="Всё готовим на месте. Цены указаны в рублях.">
+          Всё готовим на месте. Цены указаны в рублях.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="menu-grid" id="menu-grid">
+          <!-- Позиции меню рендерятся из js/menu.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Подвал ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-emoji">☕</span>
+      <p data-bug="© 2026 Кофейня Стипендия. Меню может измениться без предупреждения. И с предупреждением тоже."
+         data-normal="© 2026 Кофейня Стипендия. Все права защищены.">
+        © 2026 Кофейня Стипендия. Все права защищены.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/bugs.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
