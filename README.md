@@ -6,6 +6,8 @@
 
 https://is-tools-2026.github.io/itmo_tools_2026.github.io/index.html
 
+test-task: https://forms.gle/rEt8xB5sLbYhnF5Q8
+
 ## О проекте
 
 Проект представляет собой статический сайт из трёх страниц:
